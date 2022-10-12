@@ -1,8 +1,7 @@
-import pandas as pd
-import plotly.express as px
-#Sorry but this has been copy pastied from scatterplot.py project
-dataFrames = pd.read_csv("covid_data.csv")
-framesInGraph = px.scatter(dataFrames, x="country", y="date",
-	          size="cases",color="country",
-                   size_max=60)
-framesInGraph.show()
+import pandas as gr
+import plotly.express as vs
+
+df = gr.read_csv("CountryData.csv")
+
+visual = vs.scatter(df, x = "date", y = "cases" , color = "country")
+visual.show()
